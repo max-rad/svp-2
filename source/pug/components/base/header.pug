@@ -3,36 +3,81 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "#",
-        text: "Бизнес",
-        isActive: true,
+        text: "О&nbsp;компании",
+        dropdown: [
+          {
+            href: "#",
+            text: "О&nbsp;нас"
+          },
+          {
+            href: "#",
+            text: "Сертификаты"
+          },
+          {
+            href: "#",
+            text: "Вакансии"
+          }
+        ]
       },
       {
         href: "#",
-        text: "О нас"
+        text: "Продукция",
+        dropdown: [
+          {
+            href: "#",
+            text: "Системы верхнего привода"
+          },
+          {
+            href: "#",
+            text: "Мобильные буровые установки"
+          },
+          {
+            href: "#",
+            text: "Буровые насосы"
+          },
+          {
+            href: "#",
+            text: "Запчасти и&nbsp;инструменты"
+          }
+        ]
       },
       {
         href: "#",
-        text: "Цены"
+        text: "Клиенты"
       },
       {
         href: "#",
-        text: "Оформить заказ"
+        text: "Сервис"
+      },
+      {
+        href: "#",
+        text: "Контакты"
       }
     ]
 
-  header.header(class=headerMods data-header)
+  header.header(class=headerMods data-header data-media="(max-width: 1023px)")
     .container
       .header__wrapper
-        if(currentUrl === "index.html")
-          span.header__logo
-            +icon("logo", 247, 35)
-        else
-          a.header__logo(href="index.html", aria-label="Переход на главную")
-            +icon("logo", 247, 35)
+        a.header__logo(href="/", aria-label="Переход на главную")
+          +img("content", "logo", "webp", "188", "80", "Логотип СН-РУС Сервис")
         nav.main-nav
           button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
-          ul.main-nav__list
-            each item in headerLinks
-              li.main-nav__item
-                a.main-nav__link(class={"is-active": item.isActive} href=item.href)!=item.text
+            span
+            span
+            span
+          .main-nav__menu
+            ul.main-nav__list(data-header-accordion)
+              each item in headerLinks
+                li.main-nav__item(class={"menu-item-has-children" : item.dropdown})
+                  a.main-nav__link(href=item.href)!=item.text
+                    if (item.dropdown)
+                      +icon("icon-chevron-down", 16, 16)
+                  if (item.dropdown)
+                    ul.main-nav__sublist
+                      each subitem in item.dropdown
+                        li.main-nav__subitem
+                          a.main-nav__sublink(href=subitem.href)!=subitem.text
+            .main-nav__contacts
+              a.main-nav__phone(href="tel:+79251089127") +7(925)-108-91-27
+              a.main-nav__email(href="mailto:info@sn-rus.ru")  info@sn-rus.ru
 

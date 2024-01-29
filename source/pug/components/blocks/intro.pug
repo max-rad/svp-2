@@ -1,21 +1,14 @@
 mixin intro()
   section.intro
     .intro__background
-      +picture("content", "intro-background", "png", 1920, 850, "background")
+      picture
+          source(media="(max-width: 767px)" srcset="img/content/intro/intro-background-mobile.webp, img/content/intro/intro-background-mobile@2x.webp 2x")
+          source(media="(max-width: 1023px)" srcset="img/content/intro/intro-background-tablet.webp, img/content/intro/intro-background-tablet@2x.webp 2x")
+          img(src="img/content/intro/intro-background.webp" srcset="img/content/intro/intro-background@2x.webp" width=1920 height=779 alt="background")
     .container
       .intro__wrapper
-        h1.intro__title
-          span Lorem ipsum
-          = " dolor sit ametconsectetur "
-          span adipiscing
-        p.intro__description At&nbsp;vero eos et&nbsp;accusamus et&nbsp;iusto odio dignissimos
-        ul.intro__list
-          li.intro__item
-            span Totam rem aperiam eaque ipsa
-          li.intro__item
-            span Sit voluptatem accusantium doloremque laudantium
-          li.intro__item
-            span Sed ut perspiciatis, unde omnis iste natus error
-        .intro__buttons
-          +btn({text: "заказать", type: "button"}).intro__button
-          +btn({text: "подробнее", type: "button"}).btn--white.intro__button
+        h1.intro__title Системы верхнего привода
+        p.intro__description Самые современные технологии и&nbsp;конструкторские решения
+        .intro__image
+          +img("content/intro", "intro-image", "webp", "738", "675", "Система верхнего привода")
+        +btn({href: "#", text: "Оставить заявку"}).intro__button

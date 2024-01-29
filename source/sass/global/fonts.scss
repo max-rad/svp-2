@@ -1,43 +1,65 @@
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "Lato";
+  font-weight: 300;
+  font-family: "Radio Canada";
 
   font-display: swap;
   src:
-    url("../fonts/Lato-Regular.woff2") format("woff2"),
-    url("../fonts/Lato-Regular.woff") format("woff");
+    url("../fonts/RadioCanada-Light.woff2") format("woff2"),
+    url("../fonts/RadioCanada-Light.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Radio Canada";
+
+  font-display: swap;
+  src:
+    url("../fonts/RadioCanada-Regular.woff2") format("woff2"),
+    url("../fonts/RadioCanada-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Radio Canada";
+
+  font-display: swap;
+  src:
+    url("../fonts/RadioCanada-Medium.woff2") format("woff2"),
+    url("../fonts/RadioCanada-Medium.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 600;
-  font-family: "Lato";
+  font-family: "Radio Canada";
 
   font-display: swap;
   src:
-    url("../fonts/Lato-SemiBold.woff2") format("woff2"),
-    url("../fonts/Lato-SemiBold.woff") format("woff");
+    url("../fonts/RadioCanada-SemiBold.woff2") format("woff2"),
+    url("../fonts/RadioCanada-SemiBold.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "Lato";
+  font-family: "Radio Canada";
 
   font-display: swap;
   src:
-    url("../fonts/Lato-Bold.woff2") format("woff2"),
-    url("../fonts/Lato-Bold.woff") format("woff");
+    url("../fonts/RadioCanada-Bold.woff2") format("woff2"),
+    url("../fonts/RadioCanada-Bold.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
-  font-weight: 800;
-  font-family: "Lato";
+  font-weight: 700;
+  font-family: "Arima Madurai";
 
   font-display: swap;
   src:
-    url("../fonts/Lato-ExtraBold.woff2") format("woff2"),
-    url("../fonts/Lato-ExtraBold.woff") format("woff");
+    url("../fonts/ArimaMadurai-ExtraBold.woff2") format("woff2"),
+    url("../fonts/ArimaMadurai-ExtraBold.woff") format("woff");
 }
