@@ -9,12 +9,13 @@
 
   &__label {
     display: block;
-    margin: 0 0 4px;
+    margin: 0 0 10px;
 
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 
+    color: $color-nero;
   }
 
   input {
@@ -26,7 +27,8 @@
     line-height: 24px;
 
     border: none;
-    border-radius: 12px;
+    border-radius: 4px;
+    background-color: $color-white-smoke;
     color: $color-default-black;
 
     outline: none;

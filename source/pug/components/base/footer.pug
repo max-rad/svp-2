@@ -1,3 +1,55 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        href: "#",
+        text: "О&nbsp;компании"
+      },
+      {
+        href: "#",
+        text: "Продукция"
+      },
+      {
+        href: "#",
+        text: "Клиенты"
+      },
+      {
+        href: "#",
+        text: "Сервис"
+      },
+      {
+        href: "#",
+        text: "Контакты"
+      }
+    ]
+
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        .footer__info
+          a.footer__logo(href="/", aria-label="Переход на главную")
+            +img("content", "logo", "webp", "188", "80", "Логотип СН-РУС Сервис")
+          .footer__description
+            p.footer__text ООО &laquo;СН-РУС СЕРВИС&raquo;
+            p.footer__text ОГРН 1237700778930
+            p.footer__text ИНН 9726058247
+        .footer__contacts
+          .footer__address-wrapper
+            p.footer__label Адрес
+            p.footer__address г. Москва, ул. Днепропетровская 2 офис 4092
+          .footer__email-wrapper
+            p.footer__label Почта:
+            .footer__emails
+              a.footer__email(href="mailto:info@sn-rus.ru") info@sn-rus.ru
+              a.footer__email(href="mailto:snrus@inbox.ru") snrus@inbox.ru
+          .footer__phone-wrapper
+            p.footer__label Телефон:
+            .footer__phones
+              a.footer__phone(href="tel:+78123093688") +7 (812) 309-36-88
+        ul.footer__list
+          each item in footerLinks
+            li.footer__item
+              a.footer__link(href=item.href)!=item.text
+        .footer__additional-info
+          a.footer__policy(href="#") Политика персональных данных
+          a.footer__developed(href="#") Сайт разработан в студии Van Gogh Link
