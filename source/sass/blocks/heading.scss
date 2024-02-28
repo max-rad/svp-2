@@ -1,0 +1,12 @@
+.heading {
+  display: flex;
+  align-items: baseline;
+
+  svg {
+    flex-shrink: 0;
+
+    width: 24px;
+    height: 28px;
+    margin: 0 10px 0 0;
+  }
+}

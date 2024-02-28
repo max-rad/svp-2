@@ -1,0 +1,108 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "СН-РУС Сервис | Сервис"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "service.html"
+
+block main
+  main
+    +breadcrumbs({
+      list: [
+        {
+          href: "#",
+          text: "Главная страница"
+        },
+        {
+          text: "Сервис",
+          isActive: true
+        }
+      ]
+    })
+    +section({
+      title: "Сервисное обслуживание",
+      content: {
+        text: [
+          "В&nbsp;компании ООО &laquo;СН-РУС СЕРВИС&raquo; запущено сервисное обслуживание по&nbsp;ремонту и&nbsp;техническому сопровождению буровых систем верхнего привода (СВП) в&nbsp;нефтегазодобывающих регионах России и&nbsp;стран СНГ.",
+          "Буровые системы верхнего привода являются высокотехнологичным и&nbsp;инновационным оборудованием. Именно поэтому, требования к&nbsp;сервису предъявляются самые высокие. ",
+          "Компания ООО &laquo;СН-РУС СЕРВИС&raquo; готова обеспечить заказчикам высококачественные технические услуги для эффективного повышения своевременности, стабильности и&nbsp;безопасности бурения нефтяных скважин."
+        ]
+      },
+      image: {
+        src: "photo-equipment-2",
+        format: "webp",
+        width: "683",
+        height: "598",
+        alt: "image"
+      }
+    }).section--first
+    +section({
+      title: "Запасные части",
+      content: {
+        text: [
+          "В&nbsp;настоящее время наша компания эксплуатирует аксессуары различных марок и&nbsp;различных моделей для верхнего привода. Компания внедрила передовое механическое обрабатывающее оборудование и&nbsp;имеет независимые возможности обработки.",
+          "Наши склады запасных частей расположены в&nbsp;нефтедобывающих регионах страны, находятся в&nbsp;сервисных центрах обслуживания нашей компании. Доставка запасных частей из-за рубежа производится надежными логистическими маршрутами из&nbsp;всех точек мира в&nbsp;кратчайшие сроки."
+        ]
+      },
+      gallery: [
+        {
+          image: {
+            src: "image-1",
+            format: "webp",
+            width: "320",
+            height: "320",
+            alt: "image"
+          }
+        },
+        {
+          image: {
+            src: "image-2",
+            format: "webp",
+            width: "320",
+            height: "320",
+            alt: "image"
+          }
+        },
+        {
+          image: {
+            src: "image-3",
+            format: "webp",
+            width: "320",
+            height: "320",
+            alt: "image"
+          }
+        },
+        {
+          image: {
+            src: "image-4",
+            format: "webp",
+            width: "320",
+            height: "320",
+            alt: "image"
+          }
+        }
+      ]
+    })
+    +section({
+      title: "Обслуживание систем верхнего привода",
+      content: {
+        text: [
+          "За&nbsp;последние два года наша компания также накопила богатый опыт в&nbsp;обслуживании верхнего привода для (TPEC) DQ30, DQ40, DQ50, DQ70, DQ90; Цзинхун (JH) DQ70BS, DQ70BSQ, DQ50B, DQ50BQ, DQ40B, DQ40BQ, DQ40BT, DQ30B ; Canrig 6027, 8050, 1050, 1275; VARCO 10S, 9S, 11S, 11SA, 8S;",
+          "Хунхуа (HH) DQ225DBZ, DQ315BZ, DQ450DBZ, DQ675DBZ и&nbsp;другие основные модели верхнего привода. Мы&nbsp;готовы предоставлять услуги по&nbsp;техническому обслуживанию для них."
+        ]
+      },
+      image: {
+        src: "photo-equipment-3",
+        format: "webp",
+        width: "683",
+        height: "598",
+        alt: "image"
+      }
+    })
+    +feedback()
+
+block modals

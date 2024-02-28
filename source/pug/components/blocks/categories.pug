@@ -1,0 +1,60 @@
+mixin categories()
+  -
+    const list = [
+      {
+        href: "#",
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "320",
+          height: "269",
+          alt: "image"
+        },
+        title: "Системы верхнего привода"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-2",
+          format: "webp",
+          width: "320",
+          height: "269",
+          alt: "image"
+        },
+        title: "Мобильные буровые установки"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-3",
+          format: "webp",
+          width: "320",
+          height: "269",
+          alt: "image"
+        },
+        title: "Буровые насосы"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-4",
+          format: "webp",
+          width: "320",
+          height: "269",
+          alt: "image"
+        },
+        title: "Инструменты и&nbsp;запчасти"
+      }
+    ]
+
+  section.categories
+    .container
+      .categories__wrapper
+        +title({
+          tag: "h2",
+          title: "Как мы&nbsp;снижаем риски при покупке оборудования"
+        }).categories__title
+        ul.list-reset.categories__list
+          each item in list
+            li.categories__item
+                +category-card(item)

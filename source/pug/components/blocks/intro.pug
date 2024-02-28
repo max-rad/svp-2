@@ -1,14 +1,18 @@
 mixin intro()
-  section.intro
-    .intro__background
-      picture
-          source(media="(max-width: 767px)" srcset="img/content/intro/intro-background-mobile.webp, img/content/intro/intro-background-mobile@2x.webp 2x")
-          source(media="(max-width: 1023px)" srcset="img/content/intro/intro-background-tablet.webp, img/content/intro/intro-background-tablet@2x.webp 2x")
-          img(src="img/content/intro/intro-background.webp" srcset="img/content/intro/intro-background@2x.webp" width=1920 height=779 alt="background")
-    .container
-      .intro__wrapper
-        h1.intro__title Системы верхнего привода
-        p.intro__description Самые современные технологии и&nbsp;конструкторские решения
-        .intro__image
-          +img("content/intro", "intro-image", "webp", "738", "675", "Система верхнего привода")
-        +btn({href: "#", text: "Оставить заявку"}).intro__button
+    section.intro&attributes(attributes)
+      if (currentUrl === 'index.html')
+        .intro__background
+          picture
+              source(media="(max-width: 767px)" srcset="img/content/intro/intro-background-mobile.webp, img/content/intro/intro-background-mobile@2x.webp 2x")
+              source(media="(max-width: 1023px)" srcset="img/content/intro/intro-background-tablet.webp, img/content/intro/intro-background-tablet@2x.webp 2x")
+              img(src="img/content/intro/intro-background.webp" srcset="img/content/intro/intro-background@2x.webp" width=1920 height=779 alt="background")
+        .container
+          .intro__wrapper
+            h1.intro__title Системы верхнего привода
+            p.intro__description Самые современные технологии и&nbsp;конструкторские решения
+            .intro__image
+              +img("content/intro", "intro-image", "webp", "738", "675", "Система верхнего привода")
+            +btn({href: "#", text: "Оставить заявку"}).intro__button
+      if (currentUrl === 'catalog.html')
+        .intro__background
+          video(src="" loop autoplay playsinline muted loading="lazy")

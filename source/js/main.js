@@ -8,6 +8,10 @@ import {initPhoneValidation} from './modules/init-phone-validation';
 
 
 window.addEventListener('DOMContentLoaded', () => {
+  Fancybox.bind('[data-fancybox]', {
+
+  });
+
   window.addEventListener('load', () => {
     initHeader();
     initHeaderAccordion();

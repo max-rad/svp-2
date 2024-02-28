@@ -1,0 +1,137 @@
+mixin clients()
+  -
+    const list = [
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "image",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "image"
+        }
+      }
+    ]
+
+  section.clients
+    .container
+      .clients__wrapper
+        +title({
+          tag: "h1",
+          title: "Наши клиенты"
+        }).clients__title
+        p.clients__description Оборудование ООО &laquo;СН-РУС СЕРВИС&raquo; является современным, надежным и&nbsp;безопасным, и&nbsp;обеспечивает долгосрочную ценность для бизнеса наших клиентов по&nbsp;всему миру
+        ul.list-reset.clients__list
+          each item in list
+            li.clients__item
+              +client-card(item)

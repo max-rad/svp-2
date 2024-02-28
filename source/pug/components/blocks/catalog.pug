@@ -1,0 +1,39 @@
+mixin catalog()
+  -
+    const list = [
+      {
+        href: "#",
+        text: "Системы верхнего привода"
+      },
+      {
+        href: "#",
+        text: "Мобильные буровые установки"
+      },
+      {
+        href: "#",
+        text: "Буровые насосы"
+      },
+      {
+        href: "#",
+        text: "Инструменты и&nbsp;запчасти"
+      }
+    ]
+
+  section.catalog
+    .container
+      .catalog__wrapper
+        +title({
+          tag: "h1",
+          title: "Продукция"
+        }).catalog__title
+        .catalog__content
+          .catalog__aside
+            ul.list-reset.catalog__list
+              each item in list
+                li.catalog__item
+                  a.catalog__link(href=item.href)!=item.text
+                  +icon("icon-chevron-down", 16, 16)
+            .catalog__video
+              a.catalog__video-link(href="#") ссылка на yuotube
+          .catalog__main
+            +catalog-product()

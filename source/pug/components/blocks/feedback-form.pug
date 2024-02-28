@@ -1,0 +1,22 @@
+mixin feedback-form(data)
+  .feedback-form
+    h2.feedback-form__title!=data.title
+    if (data.description)
+      p.feedback-form__description!=data.description
+    form(method="post")
+      +custom-input({
+        label: "Ваше имя",
+        type: "text",
+        name: "name"
+      }).feedback-form__input
+      +custom-input({
+        label: "Ваш номер телефона",
+        type: "tel",
+        name: "phone"
+      }).feedback-form__input
+      +custom-textarea({
+        label: "Ваш вопрос",
+        name: "question"
+      }).feedback-form__input
+      +btn({type: "submit", text: "Отправить заявку"}).feedback-form__button
+      p.feedback-form__agreement Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, Вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a>

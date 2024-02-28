@@ -1,0 +1,29 @@
+.certificate-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  cursor: zoom-in;
+
+  &__image {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+    max-height: 450px;
+
+    img {
+      width: 100%;
+      max-width: 320px;
+      height: 100%;
+      max-height: 437px;
+
+      border-radius: 10px;
+
+      object-fit: contain;
+    }
+  }
+}

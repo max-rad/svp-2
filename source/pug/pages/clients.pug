@@ -1,0 +1,29 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "СН-РУС Сервис | Клиенты"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "clients.html"
+
+block main
+  main
+    +breadcrumbs({
+      list: [
+        {
+          href: "#",
+          text: "Главная страница"
+        },
+        {
+          text: "Клиенты",
+          isActive: true
+        }
+      ]
+    })
+    +clients()
+    +feedback()
+
+block modals

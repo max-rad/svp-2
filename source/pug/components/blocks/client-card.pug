@@ -1,0 +1,4 @@
+mixin client-card(data)
+  a.client-card(href=data.href)
+    .client-card__image
+      +img("content/clients", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

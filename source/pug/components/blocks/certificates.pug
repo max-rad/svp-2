@@ -1,0 +1,137 @@
+mixin certificates()
+  -
+    const list = [
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "certificate",
+          format: "webp",
+          width: "320",
+          height: "453",
+          alt: "certificate"
+        }
+      }
+    ]
+
+  section.certificates
+    .container
+      .certificates__wrapper
+        +title({
+          tag: "h1",
+          title: "Сертификаты и&nbsp;свидетельства"
+        }).certificates__title
+        p.certificates__description Компания ООО &laquo;СН-РУС СЕРВИС&raquo; стремится предоставлять оборудование и&nbsp;услуги по&nbsp;эксплуатации разных моделей верхнего привода самого высокого уровня.
+        ul.list-reset.certificates__list
+          each item in list
+            li.certificates__item
+              +certificate-card(item)

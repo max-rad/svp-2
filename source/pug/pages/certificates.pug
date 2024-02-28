@@ -1,0 +1,29 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "СН-РУС Сервис | Сертификаты"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "certificates.html"
+
+block main
+  main
+    +breadcrumbs({
+      list: [
+        {
+          href: "#",
+          text: "Главная страница"
+        },
+        {
+          text: "Сертификаты",
+          isActive: true
+        }
+      ]
+    })
+    +certificates()
+    +feedback()
+
+block modals

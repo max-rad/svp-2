@@ -1,15 +1,29 @@
 mixin section(data)
   section.section&attributes(attributes)
-    if (data.background)
-      .section__background
-        +img(data.background.path, data.background.src, data.background.format, data.background.width, data.background.height, data.background.alt)
     .container
       .section__wrapper
-        if (data.title)
-          .section__heading
-            +icon("icon-figure", 24, 28)
-            h2.title.title--h2.section__title!=data.title
-        if (data.content)
+        if (data.image)
+          .section__columns
+            .section__info
+              +title({
+                tag: "h2",
+                title: data.title
+              }).section__title
+              .section__content
+                if (data.content.text)
+                  each item in data.content.text
+                    p!=item
+                if (data.content.list)
+                  ul
+                    each item in data.content.list
+                      li!=item
+            .section__image
+              +img("content/section", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+        else
+          +title({
+            tag: "h2",
+            title: data.title
+          }).section__title
           .section__content
             if (data.content.text)
               each item in data.content.text
@@ -18,20 +32,8 @@ mixin section(data)
               ul
                 each item in data.content.list
                   li!=item
-        if (data.button)
-          +btn({href: data.button.href, text: data.button.text}).section__button
-        if (data.list)
-          ul.list-reset.section__list
-            each item in data.list
-              li.section__item
-                if (item.type === "category")
-                  +category-card(item)
-                if (item.type === "advantage")
-                  +advantage-card(item)
-        if (data.form)
-          .section__form
-            +feedback({
-              title: "Хотите узнать больше?"
-            })
-        if block
-          block
+          if (data.gallery)
+            ul.list-reset.section__list
+              each item in data.gallery
+                li.section__item
+                  +img("content/section", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
