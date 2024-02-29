@@ -27,13 +27,13 @@ mixin catalog()
           title: "Продукция"
         }).catalog__title
         .catalog__content
-          .catalog__aside
-            ul.list-reset.catalog__list
-              each item in list
-                li.catalog__item
-                  a.catalog__link(href=item.href)!=item.text
+          ul.list-reset.catalog__list
+            each item in list
+              li.catalog__item
+                a.catalog__link(href=item.href)!=item.text
                   +icon("icon-chevron-down", 16, 16)
-            .catalog__video
-              a.catalog__video-link(href="#") ссылка на yuotube
+          .catalog__video
+            a.catalog__video-link(href="#")
+              +img("content", "youtube-link", "webp", 360, 320, "link")
           .catalog__main
             +catalog-product()

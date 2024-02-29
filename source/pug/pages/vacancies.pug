@@ -1,0 +1,28 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "СН-РУС Сервис | Вакансии"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "vacancies.html"
+
+block main
+  main
+    +breadcrumbs({
+      list: [
+        {
+          href: "#",
+          text: "Главная страница"
+        },
+        {
+          text: "Вакансии",
+          isActive: true
+        }
+      ]
+    })
+    +vacancies()
+
+block modals

@@ -1,0 +1,148 @@
+.catalog-card {
+  display: flex;
+
+  border: 1px solid $color-gainsboro;
+
+  @include vp-389 {
+    flex-direction: column;
+  }
+
+  @include hover-focus {
+    .catalog-card__button {
+      border: 1px solid $color-lightning-yellow;
+      background-color: $color-transparent;
+      color: $color-lightning-yellow;
+    }
+  }
+
+  @include active {
+    .catalog-card__button {
+      border: 1px solid $color-tangerine-2;
+      background-color: $color-transparent;
+      color: $color-tangerine-2;
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+
+    width: 162px;
+    height: 320px;
+
+    @include vp-1279 {
+      width: 136px;
+      height: 395px;
+    }
+
+    @include vp-389 {
+      width: 100%;
+    }
+
+    img {
+      width: 162px;
+      height: 320px;
+
+      object-fit: cover;
+
+      @include vp-1279 {
+        width: 136px;
+        height: 395px;
+      }
+
+      @include vp-389 {
+        width: 100%;
+
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+
+    @include vp-1279 {
+      padding: 20px 10px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 31px;
+
+    color: $color-default-black;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 16px;
+
+    @include vp-1439 {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    @include vp-389 {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__term {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-black;
+
+    @include vp-1439 {
+      margin: 0 0 5px;
+    }
+
+    @include vp-389 {
+      margin: 0;
+    }
+  }
+
+  &__definition {
+    margin: 0 0 0 10px;
+    padding: 0;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-black;
+
+    @include vp-1439 {
+      margin: 0;
+    }
+
+    @include vp-389 {
+      margin: 0 0 0 10px;
+    }
+  }
+
+  &__button {
+    margin: auto 0 0;
+    width: 100%;
+  }
+}

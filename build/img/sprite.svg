@@ -4,6 +4,8 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 3H13C17.9706 3 22 7.02944 22 12C22 16.9706 17.9706 21 13 21H6C3.79086 21 2 19.2091 2 17V12C2 7.02944 6.02944 3 11 3ZM8 14.75C7.58579 14.75 7.25 14.4142 7.25 14C7.25 13.5858 7.58579 13.25 8 13.25H12C12.4142 13.25 12.75 13.5858 12.75 14C12.75 14.4142 12.4142 14.75 12 14.75H8ZM8 10.75C7.58579 10.75 7.25 10.4142 7.25 10C7.25 9.58579 7.58579 9.25 8 9.25H16C16.4142 9.25 16.75 9.58579 16.75 10C16.75 10.4142 16.4142 10.75 16 10.75H8Z" fill="#F28E06"/>
 </g></symbol><symbol id="icon-chevron-down" viewBox="0 0 16 16"><g fill="none">
 <path d="M11.9465 5.45312H7.79316L4.05317 5.45312C3.41317 5.45312 3.09317 6.22646 3.5465 6.67979L6.99983 10.1331C7.55317 10.6865 8.45317 10.6865 9.0065 10.1331L10.3198 8.81979L12.4598 6.67979C12.9065 6.22646 12.5865 5.45312 11.9465 5.45312Z" fill="currentColor"/>
+</g></symbol><symbol id="icon-close" viewBox="0 0 40 40"><g fill="none">
+<path d="M29.9999 10.0001L10 30M9.99992 10L29.9998 29.9999" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </g></symbol><symbol id="icon-figure" viewBox="0 0 24 28"><g fill="none">
 <path d="M9.92625 0H24L14.1952 28H0L9.92625 0Z" fill="#F28E06"/>
 </g></symbol><symbol id="icon-phone" viewBox="0 0 24 24"><g fill="none">

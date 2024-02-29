@@ -62,7 +62,7 @@
   &__content {
     position: relative;
 
-    width: 475px;
+    width: 520px;
     padding: 40px;
 
     border-radius: 10px;
@@ -102,12 +102,25 @@
       display: block;
       flex-shrink: 0;
 
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
 
-      color: $color-default-black;
+      color: $color-tangerine;
 
       transition: color $trans-default;
+    }
+
+    @include hover-focus {
+      svg {
+        color: $color-lightning-yellow;
+      }
+
+    }
+
+    @include active {
+      svg {
+        color: $color-tangerine-2;
+      }
     }
   }
 
@@ -127,30 +140,5 @@
   iframe {
     max-width: 100%;
     border: none;
-  }
-
-  &--gallery {
-    .modal__content {
-      position: static;
-
-      background-color: $color-transparent;
-    }
-
-    .modal__close-button {
-      @include vp-1023 {
-        top: 0;
-        right: 0;
-      }
-
-      @include vp-767 {
-        top: 0;
-        right: 0;
-      }
-
-      svg {
-        width: 48px;
-        height: 48px;
-      }
-    }
   }
 }

@@ -1,0 +1,12 @@
+mixin vacancies()
+  section.vacancies
+    .container
+      .vacancies__wrapper
+        +title({
+          tag: "h1",
+          title: "Вакансии"
+        }).vacancies__title
+        p.vacancies__description Система менеджмента ООО &laquo;СН-РУС СЕРВИС&raquo; определяет структуру и&nbsp;принципы того, как компания осуществляет свою деятельность по&nbsp;всему миру в&nbsp;отношении качества наших услуг и&nbsp;продуктов
+        ul.list-reset.vacancies__list
+          li.vacancies__item
+            +vacancy-card()

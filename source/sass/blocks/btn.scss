@@ -28,4 +28,26 @@
   @include active {
     background-color: $color-tangerine-2;
   }
+
+  &--border {
+    padding: 11px 19px;
+
+    border: 1px solid $color-tangerine;
+    background-color: $color-transparent;
+    color: $color-tangerine;
+
+    transition: border $trans-default, color $trans-default;
+
+    @include hover-focus {
+      border: 1px solid $color-lightning-yellow;
+      background-color: $color-transparent;
+      color: $color-lightning-yellow;
+    }
+
+    @include active {
+      border: 1px solid $color-tangerine-2;
+      background-color: $color-transparent;
+      color: $color-tangerine-2;
+    }
+  }
 }

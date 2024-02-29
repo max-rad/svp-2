@@ -11,6 +11,18 @@ block variables
 
 block main
   main
+    +breadcrumbs({
+      list: [
+        {
+          href: "#",
+          text: "Главная страница"
+        },
+        {
+          text: "Каталог",
+          isActive: true
+        }
+      ]
+    }).breadcrumbs--absolute
     +intro().intro--video
     +catalog()
 

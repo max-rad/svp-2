@@ -12,7 +12,7 @@ mixin intro()
             p.intro__description Самые современные технологии и&nbsp;конструкторские решения
             .intro__image
               +img("content/intro", "intro-image", "webp", "738", "675", "Система верхнего привода")
-            +btn({href: "#", text: "Оставить заявку"}).intro__button
+            +btn({href: "#", text: "Оставить заявку"}).intro__button(data-open-modal="feedback")
       if (currentUrl === 'catalog.html')
         .intro__background
           video(src="" loop autoplay playsinline muted loading="lazy")

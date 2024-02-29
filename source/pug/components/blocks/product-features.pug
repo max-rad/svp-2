@@ -1,0 +1,17 @@
+mixin product-features()
+  section.product-features
+    .container
+      .product-features__wrapper
+        h2.product-features__title Технические характеристики
+        .product-features__content
+          .product-features__info
+            dl.product-features__list
+              .product-features__item
+                dt.product-features__term Условная глубина бурения:
+                dd.product-features__definition 7&nbsp;000&nbsp;м
+              .product-features__item
+                dt.product-features__term Режим привода:
+                dd.product-features__definition AC-VCD
+          .product-features__image
+            +img("content/product", "diagram", "webp", 484, 484, "diagram")
+
