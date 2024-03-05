@@ -35,7 +35,7 @@
     position: relative;
     padding: 220px 0;
 
-    @include vp-1023 {
+    @include vp-1199 {
       padding: 180px 0;
     }
 
@@ -56,7 +56,13 @@
 
     color: $color-default-white;
 
-    @include vp-1023 {
+    @include vp-1439 {
+      max-width: 650px;
+      font-size: 60px;
+      line-height: 73px;
+    }
+
+    @include vp-1199 {
       max-width: 300px;
 
       font-size: 54px;
@@ -86,7 +92,7 @@
 
     color: $color-default-white;
 
-    @include vp-1023 {
+    @include vp-1199 {
       max-width: 300px;
 
       font-size: 18px;
@@ -106,27 +112,37 @@
     z-index: -1;
     position: absolute;
     top: 37px;
-    left: calc(100% - 738px + 38px);
+    left: calc(100% - 617px + 38px);
 
-    width: 738px;
-    height: 675px;
+    width: 617px;
+    height: 640px;
 
     @include vp-1439 {
-      left: 680px;
+      right: -30px;
+      left: unset;
+    }
+
+    @include vp-1279 {
+      right: -226px;
+    }
+
+    @include vp-1199 {
+      top: 39px;
+      right: 0;
     }
 
     @include vp-1023 {
-      top: 39px;
-      left: 254px;
+      right: -254px;
     }
 
     @include vp-767 {
       position: relative;
       top: 0;
       left: 0;
+      right: 0;
 
-      width: 320px;
-      height: 293px;
+      width: 284px;
+      height: 294px;
     }
 
     @include vp-389 {
@@ -134,14 +150,14 @@
     }
 
     img {
-      width: 738px;
-      height: 675px;
+      width: 617px;
+      height: 640px;
 
       object-fit: contain;
 
       @include vp-767 {
-        width: 320px;
-        height: 293px;
+        width: 284px;
+        height: 294px;
       }
 
       @include vp-389 {
